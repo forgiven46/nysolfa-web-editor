@@ -1,0 +1,64 @@
+/* 
+    Document   : editor
+    Created on : 9 sept. 2014, 16:21:32
+    Author     : USER
+    Description:
+        Purpose of the stylesheet follows.
+*/
+root { 
+    display: block;
+}
+#support
+{
+    width: 1000px;
+    height: 700px;
+    float: center;
+    background-color: #EEEEEE;
+    /*margin: 20px 20px 20px 20px;*/
+    margin: 40px 100px 40px 200px;
+}
+#bar_outil
+{
+    width:100%;
+    /*height: inherit;*/
+    padding: 2px 0px 0px 1px;
+}
+#bar_outil_content
+{
+    width:100%;
+    /*height: inherit;*/
+    height: auto;
+    padding: 3px 3px 3px 3px;
+    /*border-bottom: 2px solid #000000;*/
+    /*border-top: 2px solid #000000;*/
+    background-color: #FFFFFF;
+}
+#partition_left,#partition_right
+{
+    display: inline;
+    vertical-align: top !important;
+}
+#partition_left
+{
+    background: #EEEEEF;
+    width: 60%;
+    height: auto;
+}
+#partition_right
+{
+    background: #EEE00F;
+    width: 20%;
+    height: auto;
+}
+#partition
+{
+    width: 80%;
+}
+#txt_content
+{
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+    margin: 2px;
+    resize:none;
+}

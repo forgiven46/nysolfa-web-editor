@@ -1,0 +1,163 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link href="bootstrap3/css/bootstrap.css" rel="stylesheet">
+        <link href="css/editor.css" rel="stylesheet">
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="bootstrap3/js/jquery-1.9.1.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="bootstrap3/js/bootstrap.min.js"></script>
+        <script src="js/initialize.js"></script>
+        <script src="js/click.js"></script>
+        <script src="js/fonctions.js"></script>
+        <title>Editor</title>
+    </head>
+    
+    <body>
+        <div id="support">
+            <div id="bar_outil">
+                <ul id="tab_outil" class="nav nav-tabs" role="tablist">
+                    <li class="active">
+                        <a data-toggle="tab" role="tab" href="#partition">Partition</a>
+                    </li>
+                    <li class="">
+                        <a data-toggle="tab" role="tab" href="#outils">Outils</a>
+                    </li>
+                    <li class="dropdown">
+                        <a id="myTabDrop1" class="dropdown-toggle" data-toggle="dropdown">
+                        Edition
+                        <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="myTabDrop1" role="menu">
+                            <li class="">
+                                <a data-toggle="tab" role="tab" tabindex="-1" href="">Copy</a>
+                            </li>
+                            <li class="">
+                                <a data-toggle="tab" role="tab" tabindex="-1" href="">Paste</a>
+                            </li>
+                            <li class="">
+                                <a data-toggle="tab" role="tab" tabindex="-1" href="">Select all</a>
+                            </li>
+                            <li class="">
+                                <a data-toggle="tab" role="tab" tabindex="-1" href="">Comment</a>
+                            </li>
+                            <li class="">
+                                <a data-toggle="tab" role="tab" tabindex="-1" href="#search">Search</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                        <a data-toggle="tab" role="tab" href="#aide">Aide</a>
+                    </li>
+                </ul>
+                <div id="bar_outil_content" class="tab-content">
+                    <div id="partition" class="tab-pane fade active in">
+                        <div class="input-group">
+                            <span class="input-group-addon">Hira:</span>
+                            <input id="titre" type="text" class="form-control" placeholder="lohatenin-Kira">
+                            <span class="input-group-addon">Namorona ny feony:</span>
+                            <input id="mp_feo" type="text" class="form-control" placeholder="Ny Mpamorona ny feo">
+                        </div>
+                        <div class="input-group">
+                            <span class="input-group-addon">Nadika ny feony:</span>
+                            <input id="nadika" type="text" class="form-control" placeholder="Ny nandika ny feony">
+                            <span class="input-group-addon">Tonony:</span>
+                            <input id="mp_tonony" type="text" class="form-control" placeholder="Mpanoratra ny Tonony">
+                         </div>
+                        <button class="btn btn-success" style="float: right">Inserer</button>
+                        
+                    </div>
+                    <div id="outils" class="tab-pane fade">
+                        <div class="btn-group">
+                            <a id="new" class="btn btn-default glyphicon glyphicon-file">&nbsp;New</a>
+                            <a id="open" class="btn btn-default glyphicon glyphicon-open">&nbsp;Open</a>
+                            <a id="print" class="btn btn-default glyphicon glyphicon-print">&nbsp;Print</a>
+                            <a id="download" class="btn btn-default glyphicon glyphicon-download">&nbsp;download</a>
+                            <a id="upload" class="btn btn-default glyphicon glyphicon-upload">&nbsp;Upload</a>
+                            <a id="play" class="btn btn-default glyphicon glyphicon-play">&nbsp;Play</a>
+                            <a id="save" class="btn btn-default glyphicon glyphicon-floppy-disk">&nbsp;Save</a>
+                            <a id="copy" class="btn btn-default glyphicon glyphicon-search">&nbsp;Copy</a>
+                            <a id="paste" class="btn btn-default glyphicon glyphicon-search">&nbsp;Paste</a>
+                            <a id="comment" class="btn btn-default glyphicon glyphicon-search">&nbsp;Commenter</a>
+                        </div>
+                        <div class="input-group btn-block">
+                            <span class="input-group-addon">Do dia : </span>
+                            <select id="key_note" class="form-control">
+                                <option>d</option>
+                                <option>r</option>
+                                <option>m</option>
+                                <option>f</option>
+                                <option>s</option>
+                                <option>l</option>
+                                <option>t</option>
+                                <option>d</option>
+                            </select>
+                            <span class="input-group-addon"><input id="aug_dim" type="checkbox">&nbsp;&nbsp;Aug/Dim : </span>
+                            <span class="input-group-addon"><input id="bemole" type="checkbox">&nbsp;&nbsp;b </span>
+                            <span class="input-group-addon"><input id="dieze" type="checkbox">&nbsp;&nbsp;# </span>
+                            <span class="input-group-addon">Temps:</span>
+                            <select id="temp_num" class="form-control">
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                                <option>6</option>
+                            </select>
+                            <span class="input-group-addon">/</span>
+                            <select id="temp_den" class="form-control">
+                                <option>4</option>
+                                <option>8</option>
+                                <option>16</option>
+                            </select>
+                        </div>
+                         <div class="btn-group">
+                            <a id="do" class="btn btn-default">d</a>
+                            <a id="re" class="btn btn-default">r</a>
+                            <a id="mi" class="btn btn-default">m</a>
+                            <a id="fa" class="btn btn-default">f</a>
+                            <a id="sol" class="btn btn-default">s</a>
+                            <a id="la" class="btn btn-default">l</a>
+                            <a id="ti" class="btn btn-default">t</a>
+                            <a id="point" class="btn btn-default">.</a>
+                            <a id="virg" class="btn btn-default">,</a>
+                            <a id="virg2" class="btn btn-default">,,</a>
+                            <a id="pause" class="btn btn-default">&nbsp;&nbsp;</a>
+                            <a id="apos" class="btn btn-default">'</a>
+                            <a id="apos2" class="btn btn-default">''</a>
+                            <a id="tire" class="btn btn-default">-</a>
+                            <a id="point2" class="btn btn-default">:</a>
+                            <a id="exclam" class="btn btn-default">!</a>
+                            <a id="barre" class="btn btn-default">|</a>
+                            <a id="cross_open" class="btn btn-default">[</a>
+                            <a id="cross_close" class="btn btn-default">]</a>
+                            <a id="encol_open" class="btn btn-default">{</a>
+                            <a id="encol_close" class="btn btn-default">}</a>
+                        </div>
+                    </div>
+                    <div id="search" class="tab-pane fade">
+                        <form class="navbar-form navbar-left" role="search">
+                            <div class="form-group">
+                              <input id="search_in" type="text" class="form-control" placeholder="Search">
+                            </div>
+                            <button type="submit" class="btn btn-default">Submit</button>
+                        </form>
+                    </div>
+                    <!--<div id="dropdown2" class="tab-pane fade">
+                    <p>Trust fund seitan letterpress, keytar raw denim keffiyeh etsy art party before they sold out master cleanse gluten-free squid scenester freegan cosby sweater. Fanny pack portland seitan DIY, art party locavore wolf cliche high life echo park Austin. Cred vinyl keffiyeh DIY salvia PBR, banh mi before they sold out farm-to-table VHS viral locavore cosby sweater. Lomo wolf viral, mustache readymade thundercats keffiyeh craft beer marfa ethical. Wolf salvia freegan, sartorial keffiyeh echo park vegan.</p>
+                    </div>-->
+                </div>
+            </div>
+            <div id="txt">
+                <textarea id='txt_content' rows="25" cols="50"></textarea>
+            </div>
+        </div> 
+    </body>
+</html>
