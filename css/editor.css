@@ -62,3 +62,21 @@ root {
     margin: 2px;
     resize:none;
 }
+#partition td {
+    text-align: right;
+    padding: 3px;
+}
+#partition input,
+#partition button{
+    border-radius : 3px;
+    padding-left: 2px;
+}
+.label_small {
+    width: 100px;    
+}
+.label_big {
+    width: 150px;    
+}
+#titre{
+    
+}

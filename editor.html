@@ -59,21 +59,39 @@ and open the template in the editor.
                     </li>
                 </ul>
                 <div id="bar_outil_content" class="tab-content">
-                    <div id="partition" class="tab-pane fade active in">
-                        <div class="input-group">
-                            <span class="input-group-addon">Hira:</span>
-                            <input id="titre" type="text" class="form-control" placeholder="lohatenin-Kira">
-                            <span class="input-group-addon">Namorona ny feony:</span>
-                            <input id="mp_feo" type="text" class="form-control" placeholder="Ny Mpamorona ny feo">
+                    <div id="partition" class="tab-pane fade active in" style="padding: 0px">
+                        <div style="margin: 2px 0px 2px 5px;width: 110%;
+                             background-color: #F2F2F2;padding: 10px 10px 10px 0px;border-radius : 5px;">
+                        <table>
+                            <tr>
+                                <td><label for="titre" class="label_small"> Hira :</label></td>
+                                <td>
+                                    <input type="text" name="titre" id="titre" value="" size="30" />
+                                </td>
+                                <td><label for="arranger" class="label_big"> Nadika ny feony : </label></td>
+                                <td>
+                                    <input type="text" name="arranger" id="arranger" value="" size="30" />
+                                </td>
+                                <td>
+                                    
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><label for="auteur" class="label_small"> Tonony :</label></td>
+                                <td>
+                                    <input type="text" name="auteur" id="auteur" value="" size="30" />
+                                </td>
+                                <td><label for="composer" class="label_big"> Namorona ny feony :</label></td>
+                                <td>
+                                    <input type="text" name="composer" id="composer" value="" size="30" />
+                                </td>
+                                <td>
+                                    <button name="btn_insert" class="btn-success" 
+                                            style="margin-left: 5px; padding: 2px 8px;" onclick="inserer();">inserer</button>
+                                </td>
+                            </tr>
+                        </table>    
                         </div>
-                        <div class="input-group">
-                            <span class="input-group-addon">Nadika ny feony:</span>
-                            <input id="nadika" type="text" class="form-control" placeholder="Ny nandika ny feony">
-                            <span class="input-group-addon">Tonony:</span>
-                            <input id="mp_tonony" type="text" class="form-control" placeholder="Mpanoratra ny Tonony">
-                         </div>
-                        <button class="btn btn-success" style="float: right">Inserer</button>
-                        
                     </div>
                     <div id="outils" class="tab-pane fade">
                         <div class="btn-group">
@@ -156,7 +174,9 @@ and open the template in the editor.
                 </div>
             </div>
             <div id="txt">
-                <textarea id='txt_content' rows="25" cols="50"></textarea>
+                <form id="zn_text" name="zn_text" method="post">
+                    <textarea id='txt_content' rows="25" cols="50"></textarea>
+                </form>
             </div>
         </div> 
     </body>

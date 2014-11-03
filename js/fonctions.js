@@ -2,6 +2,37 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
+
+function inserer(){
+    var txt ="";
+    var tit = "Hira :";
+    var comp = "Namorona ny feony :";
+    var arr = "Nandika ny feony:";
+    var aut = "Tonony :";
+    
+    var titre = $("#titre").val();
+    var composer = $("#composer").val();
+    var arranger = $("#arranger").val();
+    var auteur = $("#auteur").val();
+    
+    var zn_text = document.forms.zn_text.txt_content;
+    var val_txt = $("#txt_content").val();
+    var delim = "\n";
+    var thead = val_txt.split(delim);
+//    if(thead.length >= 6){
+        thead[0] = tit+" "+titre;
+        thead[1] = comp+" "+composer;
+        thead[2] = arr+" "+arranger;
+        thead[3] = aut+" "+auteur;
+        thead[4] = "";
+        thead[5] = "";
+        thead[6] = "#";
+//    }
+    for(var i=0;i<thead.length;i++){
+        txt += thead[i]+"\n";
+    }
+    $("#txt_content").val(txt);
+}
 function test() {
     alert("Nombre de paramètres: " + arguments.length);
     for(var i=0; i<arguments.length; i++) {
