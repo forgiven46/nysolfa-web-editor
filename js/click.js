@@ -40,90 +40,75 @@ $(function() {
        alert("merci mon Dieu");
     });
 /**************  clé  *********************************/
-    $('#aug_dim').click(function (e) {
-       alert("merci mon Dieu");
-    });
-    $('#bemol').click(function (e) {
-       alert("merci mon Dieu");
-    });
-    $('#dieze').click(function (e) {
-       alert(e);
-    });
-    $('#temp_num').click(function (e) {
-       alert("merci mon Dieu");
-    });
-    $('#temp_den').click(function (e) {
-       alert("merci mon Dieu");
-    });
-   
+    
    /**les notes ******/
     $('#do').click(function (e) {
-       alert(e);
+       inserer('d');
     });
     $('#re').click(function (e) {
-       alert("merci mon Dieu");
+       inserer('r');
     });
     $('#me').click(function (e) {
-       alert("merci mon Dieu");
+       inserer('m');
     });
     $('#fa').click(function (e) {
-       alert("merci mon Dieu");
+       inserer('f');
     });
     $('#sol').click(function (e) {
-       alert(e);
+       inserer('s');
     });
     $('#la').click(function (e) {
-       alert("merci mon Dieu");
+       inserer('l');
     });
     $('#ti').click(function (e) {
-       alert("merci mon Dieu");
+       inserer('t');
     });
     
     /******autres symboles******************************/
     $('#point').click(function (e) {
-       alert(e);
+       inserer('.');
     });
     $('#virg').click(function (e) {
-       alert("merci mon Dieu");
+       inserer(',');
     });
     $('#virg2').click(function (e) {
-       alert("merci mon Dieu");
+       inserer(',,');
     });
     $('#pause').click(function (e) {
-       alert("merci mon Dieu");
+       inserer(',,');
     });
     $('#apos').click(function (e) {
-       alert(e);
+       inserer("'");
     });
     $('#apos2').click(function (e) {
-       alert("merci mon Dieu");
+       inserer("''");
     });
     $('#tire').click(function (e) {
-       alert("merci mon Dieu");
+       inserer('-');
     });
     $('#point2').click(function (e) {
-       alert("merci mon Dieu");
-    });
-    $('#point2').click(function (e) {
-       alert(e);
+       inserer(':');
     });
     $('#exclam').click(function (e) {
-       alert("merci mon Dieu");
+       inserer('!');
     });
     $('#barre').click(function (e) {
-       alert("merci mon Dieu");
+       inserer('|');
     });
     $('#cross_open').click(function (e) {
-       alert("merci mon Dieu");
+       inserer('[');
     });
     $('#cross_close').click(function (e) {
-       alert(e);
+       inserer(']');
     });
     $('#encol_open').click(function (e) {
-       alert("merci mon Dieu");
+       inserer('{');
     });
     $('#encol_close').click(function (e) {
-       alert("merci mon Dieu");
+       inserer('}');
+    });
+    $('#del').click(function (e) {
+//       inserer('}');
     });
 });
 

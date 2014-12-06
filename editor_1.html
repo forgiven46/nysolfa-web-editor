@@ -87,7 +87,7 @@ and open the template in the editor.
                                 </td>
                                 <td>
                                     <button name="btn_insert" class="btn-success" 
-                                            style="margin-left: 5px; padding: 2px 8px;" onclick="inserer_meta_part();">inserer</button>
+                                            style="margin-left: 5px; padding: 2px 8px;" onclick="inserer();">inserer</button>
                                 </td>
                             </tr>
                         </table>    
@@ -106,9 +106,9 @@ and open the template in the editor.
                             <a id="paste" class="btn btn-default glyphicon glyphicon-search">&nbsp;Paste</a>
                             <a id="comment" class="btn btn-default glyphicon glyphicon-search">&nbsp;Commenter</a>
                         </div>
-                        <div class="input-group btn-block" style="width: 1000px;height: 10px; font-size: 10px;">
+                        <div class="input-group btn-block">
                             <span class="input-group-addon">Do dia : </span>
-                            <select id="key_note" class="form-control" style="padding-left: 1px;">
+                            <select id="key_note" class="form-control">
                                 <option>d</option>
                                 <option>r</option>
                                 <option>m</option>
@@ -118,51 +118,23 @@ and open the template in the editor.
                                 <option>t</option>
                                 <option>d</option>
                             </select>
-                            <span class="input-group-addon"><input id="aug_dim" type="checkbox" name="aug_dim">&nbsp;&nbsp;Aug/Dim : </span>
-                            <span class="input-group-addon"><input id="bemole" type="radio" name="dim">&nbsp;&nbsp;b </span>
-                            <span class="input-group-addon"><input id="dieze" type="radio" name="dim">&nbsp;&nbsp;# </span>
-                        
+                            <span class="input-group-addon"><input id="aug_dim" type="checkbox">&nbsp;&nbsp;Aug/Dim : </span>
+                            <span class="input-group-addon"><input id="bemole" type="checkbox">&nbsp;&nbsp;b </span>
+                            <span class="input-group-addon"><input id="dieze" type="checkbox">&nbsp;&nbsp;# </span>
                             <span class="input-group-addon">Temps:</span>
-                            <select id="temp_num" class="form-control" style="padding-left: 1px;">
+                            <select id="temp_num" class="form-control">
                                 <option>2</option>
                                 <option>3</option>
                                 <option>4</option>
-<!--                                <option>5</option>
-                                <option>6</option>-->
+                                <option>5</option>
+                                <option>6</option>
                             </select>
                             <span class="input-group-addon">/</span>
-                            <select id="temp_den" class="form-control" style="padding-left: 1px;">
+                            <select id="temp_den" class="form-control">
                                 <option>4</option>
-<!--                                <option>8</option>
-                                <option>16</option>-->
-                            </select>
-                            <a id="insert_key" class="input-group-addon btn btn-success" style="margin-left: 5px;
-                               padding: 0px 8px;margin-right: 5px;border: solid #419641 thin;
-                               border-radius: 4px;" onclick="inserer_key();">&nbsp;Inserer</a>
-                            <span class="input-group-addon">NB mesure par ligne :</span>
-                            <select id="nb_mes_by_ligne" class="form-control" style="padding-left: 0px;">
-                                <option selected>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
-                                <option>6</option>
-                                <option>7</option>
                                 <option>8</option>
+                                <option>16</option>
                             </select>
-                            <span class="input-group-addon">NB ligne :</span>
-                            <select id="nb_ligne" class="form-control" style="padding-left: 0px;">
-                                <option selected>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
-                                <option>6</option>
-                                <option>7</option>
-                                <option>8</option>
-                            </select>
-                            <a id="insert_mesure" class="input-group-addon btn btn-info" style="margin-left: 5px;
-                               padding: 0px 8px;margin-right: 5px;border: solid #4285F4 thin;
-                               border-radius: 4px;" onclick="inserer_mesure(1);">&nbsp;Inserer</a>
                         </div>
                          <div class="btn-group">
                             <a id="do" class="btn btn-default">d</a>
@@ -186,7 +158,6 @@ and open the template in the editor.
                             <a id="cross_close" class="btn btn-default">]</a>
                             <a id="encol_open" class="btn btn-default">{</a>
                             <a id="encol_close" class="btn btn-default">}</a>
-                            <a id="del" class="btn btn-default">del</a>
                         </div>
                     </div>
                     <div id="search" class="tab-pane fade">
@@ -204,7 +175,7 @@ and open the template in the editor.
             </div>
             <div id="txt">
                 <form id="zn_text" name="zn_text" method="post">
-                    <textarea id='txt_content' rows="25" cols="50" wrap="off" style="overflow: auto;"></textarea>
+                    <textarea id='txt_content' rows="25" cols="50"></textarea>
                 </form>
             </div>
         </div> 

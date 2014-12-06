@@ -61,6 +61,7 @@ root {
     padding: 5px;
     margin: 2px;
     resize:none;
+    font-family: "Courier New", Courier, monospace;
 }
 #partition td {
     text-align: right;
